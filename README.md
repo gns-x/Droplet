@@ -42,6 +42,18 @@ docker run -d -p 80:8000 --env-file .env --name droplet-manager droplet-manager
   Airtable: logs each droplet as a row
   ```
 
+# Droplet Manager Prototype (FastAPI)
+
+Clean prototype with:
+- Status endpoints: `/` (health), `/register` (POST), `/list` (GET)
+- Control endpoints: `/power/{droplet_id}` (POST), `/destroy/{droplet_id}` (DELETE)
+- Airtable logging: `events` table with `droplet_id`, `name`, `ip`, `status`, `created`
+
+## Prerequisites
+- Docker on the server
+- `.env` in project root (not committed):
+
+
 ## Smoke Tests
 ```bash
 curl http://<IP>/
