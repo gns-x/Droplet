@@ -46,7 +46,7 @@ docker run -d -p 80:8000 --env-file .env --name droplet-manager droplet-manager
 
 Clean prototype with:
 - Status endpoints: `/` (health), `/register` (POST), `/list` (GET)
-- Control endpoints: `/power/{droplet_id}` (POST), `/destroy/{droplet_id}` (DELETE)
+- Control endpoints: `/power/{droplet_id}` (POST)
 - Airtable logging: `events` table with `droplet_id`, `name`, `ip`, `status`, `created`
 
 ## Prerequisites
